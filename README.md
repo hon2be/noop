@@ -86,7 +86,7 @@ packs/
 
 ## 스폰서
 
-[![쿠팡에서 쇼핑하기](https://image8.coupangcdn.com/image/affiliate/banner/6d0bb5b99f9747c1ee4a15f07b8e4e98@2x.jpg)](https://link.coupang.com/a/dUaKDktrAi)
+[![쿠팡에서 쇼핑하기](assets/coupang_banner.jpg)](https://link.coupang.com/a/dUaKDktrAi)
 
 > 이 프로젝트는 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.
 
