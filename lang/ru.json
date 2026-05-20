@@ -1,0 +1,55 @@
+{
+  "lang.name": "Русский",
+  "lang.code": "ru",
+
+  "loading.packs":   "Загрузка контента...  ",
+  "loading.shuffle": "Перемешивание...      ",
+  "loading.ads":     "Загрузка рекламы...   ",
+  "loading.ready":   "Готово!               ",
+  "intro.start":     "Нажмите любую клавишу",
+
+  "lang_menu.title": "Выбор языка",
+  "lang_menu.hint":  "↑↓ движение   Enter выбор",
+
+  "category_menu.title": "[ Выбор категории ]",
+  "category_menu.hint":  "↑↓ движение  цифра  Enter выбор  q выход",
+  "category.random":     "Случайно",
+  "category.korean":     "Корейский",
+  "category.english":    "Английский",
+  "category.dev":        "Разработка",
+  "category.news":       "Новости",
+  "category.nonsense":   "Загадки",
+
+  "count_menu.title": "[ Количество вопросов ]",
+  "count_menu.desc":  "{count} из {total} вопросов",
+  "count_menu.hint":  "← → изменить   Enter старт   q выход",
+
+  "ad.skip":      "  ← Пропустить  ",
+  "ad.visit":     "  Открыть →  ",
+  "ad.hint":      "← → движение   Space / Enter подтвердить   q выход",
+  "ad.countdown": "Автопропуск через {sec}с",
+
+  "game.loading":       "Загрузка игры...",
+  "game.hint_collapse": "h свернуть  q выход",
+  "game.hint_expand":   "h развернуть",
+  "game.hint_quit":     "q выход",
+
+  "quiz.name":        "Викторина",
+  "quiz.next":        "Enter / Space → следующий",
+  "quiz.correct":     "  ✓  Верно!  ",
+  "quiz.wrong":       "  ✗  Неверно  ",
+  "quiz.done":        "Готово! 🎉",
+  "quiz.score":       "{correct} / {total} верно",
+  "quiz.accuracy":    "Точность  {acc}%",
+  "quiz.hint_block":  "←→ движение  Space взять/положить  Enter ответ",
+  "quiz.hint_choice": "←→ движение  Space выбор  Enter ответ",
+  "quiz.multi_select": "(множественный выбор)",
+
+  "outro.title":     "Статистика",
+  "outro.accuracy":  "Точность    {val}%",
+  "outro.count":     "Вопросов    {val}",
+  "outro.elapsed":   "Время       {val}",
+  "outro.streak":    "Серия       {val}",
+  "outro.bye":       "Отлично провели время ожидания 👋",
+  "outro.countdown": "Закрытие через {n}с..."
+}

@@ -1,0 +1,55 @@
+{
+  "lang.name": "Français",
+  "lang.code": "fr",
+
+  "loading.packs":   "Chargement du contenu...",
+  "loading.shuffle": "Mélange des questions...",
+  "loading.ads":     "Récupération des pubs...",
+  "loading.ready":   "Prêt !                  ",
+  "intro.start":     "Appuyez sur une touche pour démarrer",
+
+  "lang_menu.title": "Choisir la langue",
+  "lang_menu.hint":  "↑↓ déplacer   Enter choisir",
+
+  "category_menu.title": "[ Choisir une catégorie ]",
+  "category_menu.hint":  "↑↓ déplacer  chiffre  Enter confirmer  q quitter",
+  "category.random":     "Aléatoire",
+  "category.korean":     "Coréen",
+  "category.english":    "Anglais",
+  "category.dev":        "Développement",
+  "category.news":       "Actualités",
+  "category.nonsense":   "Devinettes",
+
+  "count_menu.title": "[ Nombre de questions ]",
+  "count_menu.desc":  "{count} question(s) sur {total}",
+  "count_menu.hint":  "← → ajuster   Enter démarrer   q quitter",
+
+  "ad.skip":      "  ← Passer  ",
+  "ad.visit":     "  Visiter →  ",
+  "ad.hint":      "← → déplacer   Space / Enter confirmer   q quitter",
+  "ad.countdown": "Passage automatique dans {sec}s",
+
+  "game.loading":       "Chargement du jeu...",
+  "game.hint_collapse": "h réduire/agrandir  q quitter",
+  "game.hint_expand":   "h agrandir",
+  "game.hint_quit":     "q quitter",
+
+  "quiz.name":        "Quiz",
+  "quiz.next":        "Enter / Space → suivant",
+  "quiz.correct":     "  ✓  Correct !  ",
+  "quiz.wrong":       "  ✗  Faux  ",
+  "quiz.done":        "Terminé ! 🎉",
+  "quiz.score":       "{correct} / {total} correct(s)",
+  "quiz.accuracy":    "Précision  {acc}%",
+  "quiz.hint_block":  "←→ déplacer  Space saisir  Enter valider",
+  "quiz.hint_choice": "←→ déplacer  Space choisir  Enter valider",
+  "quiz.multi_select": "(sélection multiple)",
+
+  "outro.title":     "Résultats",
+  "outro.accuracy":  "Précision   {val}%",
+  "outro.count":     "Questions   {val}",
+  "outro.elapsed":   "Durée       {val}",
+  "outro.streak":    "Série       {val}",
+  "outro.bye":       "Bien joué pendant l'attente 👋",
+  "outro.countdown": "Fermeture dans {n}s..."
+}

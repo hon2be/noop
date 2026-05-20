@@ -1,0 +1,55 @@
+{
+  "lang.name": "English",
+  "lang.code": "en",
+
+  "loading.packs":   "Loading content packs...",
+  "loading.shuffle": "Shuffling questions...  ",
+  "loading.ads":     "Fetching ads...         ",
+  "loading.ready":   "Ready!                  ",
+  "intro.start":     "Press any key to start",
+
+  "lang_menu.title": "Select Language",
+  "lang_menu.hint":  "↑↓ move   Enter select",
+
+  "category_menu.title": "[ Select Category ]",
+  "category_menu.hint":  "↑↓ move  number key  Enter confirm  q quit",
+  "category.random":     "Random",
+  "category.korean":     "Korean",
+  "category.english":    "English",
+  "category.dev":        "Dev Knowledge",
+  "category.news":       "Current Events",
+  "category.nonsense":   "Nonsense",
+
+  "count_menu.title": "[ Number of Questions ]",
+  "count_menu.desc":  "{count} of {total} questions",
+  "count_menu.hint":  "← → adjust   Enter start   q quit",
+
+  "ad.skip":      "  ← Skip  ",
+  "ad.visit":     "  Visit →  ",
+  "ad.hint":      "← → move   Space / Enter confirm   q quit",
+  "ad.countdown": "Auto-skip in {sec}s",
+
+  "game.loading":       "Loading game...",
+  "game.hint_collapse": "h collapse/expand  q quit",
+  "game.hint_expand":   "h expand",
+  "game.hint_quit":     "q quit",
+
+  "quiz.name":        "Quiz",
+  "quiz.next":        "Enter / Space → next",
+  "quiz.correct":     "  ✓  Correct!  ",
+  "quiz.wrong":       "  ✗  Wrong  ",
+  "quiz.done":        "Done! 🎉",
+  "quiz.score":       "{correct} / {total} correct",
+  "quiz.accuracy":    "Accuracy  {acc}%",
+  "quiz.hint_block":   "←→ move  Space grab/drop  Enter submit",
+  "quiz.hint_choice":  "←→ move  Space select  Enter submit",
+  "quiz.multi_select": "(multi-select)",
+
+  "outro.title":     "Session Stats",
+  "outro.accuracy":  "Accuracy    {val}%",
+  "outro.count":     "Questions   {val}",
+  "outro.elapsed":   "Time        {val}",
+  "outro.streak":    "Best streak {val}",
+  "outro.bye":       "Good work while you waited 👋",
+  "outro.countdown": "Closing in {n}s..."
+}

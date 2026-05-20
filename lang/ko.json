@@ -1,0 +1,55 @@
+{
+  "lang.name": "한국어",
+  "lang.code": "ko",
+
+  "loading.packs":   "콘텐츠 팩 로딩 중...",
+  "loading.shuffle": "문제 섞는 중...     ",
+  "loading.ads":     "광고 가져오는 중... ",
+  "loading.ready":   "준비 완료!          ",
+  "intro.start":     "아무 키나 눌러 시작하기",
+
+  "lang_menu.title": "언어 선택",
+  "lang_menu.hint":  "↑↓ 이동   Enter 선택",
+
+  "category_menu.title": "[ 카테고리 선택 ]",
+  "category_menu.hint":  "↑↓ 이동  숫자키 바로선택  Enter 확인  q 종료",
+  "category.random":     "랜덤",
+  "category.korean":     "한국어",
+  "category.english":    "영어",
+  "category.dev":        "개발상식",
+  "category.news":       "시사상식",
+  "category.nonsense":   "넌센스",
+
+  "count_menu.title": "[ 문항 수 선택 ]",
+  "count_menu.desc":  "총 {total}문항 중  {count}문제를 풉니다",
+  "count_menu.hint":  "← → 조정   Enter 시작   q 종료",
+
+  "ad.skip":      "  ← 스킵  ",
+  "ad.visit":     "  방문 →  ",
+  "ad.hint":      "← → 이동   Space / Enter 확정   q 종료",
+  "ad.countdown": "{sec}초 후 자동으로 넘어갑니다",
+
+  "game.loading":       "게임 로딩 중...",
+  "game.hint_collapse": "h 접기/펼치기  q 종료",
+  "game.hint_expand":   "h 펼치기",
+  "game.hint_quit":     "q 종료",
+
+  "quiz.name":       "퀴즈",
+  "quiz.next":       "Enter / Space → 다음 문제",
+  "quiz.correct":    "  ✓  정답!  ",
+  "quiz.wrong":      "  ✗  오답  ",
+  "quiz.done":       "완료! 🎉",
+  "quiz.score":      "정답  {correct} / {total}",
+  "quiz.accuracy":   "정답률  {acc}%",
+  "quiz.hint_block":   "←→ 이동  Space 선택/해제  Enter 제출",
+  "quiz.hint_choice":  "←→ 이동  Space 선택  Enter 제출",
+  "quiz.multi_select": "(복수 선택 가능)",
+
+  "outro.title":     "오늘의 기록",
+  "outro.accuracy":  "정답률     {val}%",
+  "outro.count":     "문제수     {val}문제",
+  "outro.elapsed":   "소요       {val}",
+  "outro.streak":    "연속정답   {val}개",
+  "outro.bye":       "빌드하는 동안 잘 배웠어요 👋",
+  "outro.countdown": "{n}초 후 자동으로 닫힙니다..."
+}

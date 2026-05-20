@@ -1,0 +1,55 @@
+{
+  "lang.name": "日本語",
+  "lang.code": "ja",
+
+  "loading.packs":   "コンテンツを読込中...",
+  "loading.shuffle": "問題をシャッフル中...",
+  "loading.ads":     "広告を取得中...     ",
+  "loading.ready":   "準備完了！          ",
+  "intro.start":     "何かキーを押してスタート",
+
+  "lang_menu.title": "言語選択",
+  "lang_menu.hint":  "↑↓ 移動   Enter 選択",
+
+  "category_menu.title": "[ カテゴリ選択 ]",
+  "category_menu.hint":  "↑↓ 移動  数字キー  Enter 確認  q 終了",
+  "category.random":     "ランダム",
+  "category.korean":     "韓国語",
+  "category.english":    "英語",
+  "category.dev":        "開発知識",
+  "category.news":       "時事問題",
+  "category.nonsense":   "なぞなぞ",
+
+  "count_menu.title": "[ 問題数選択 ]",
+  "count_menu.desc":  "{total}問中 {count}問を解きます",
+  "count_menu.hint":  "← → 調整   Enter スタート   q 終了",
+
+  "ad.skip":      "  ← スキップ  ",
+  "ad.visit":     "  訪問 →  ",
+  "ad.hint":      "← → 移動   Space / Enter 確定   q 終了",
+  "ad.countdown": "{sec}秒後に自動スキップ",
+
+  "game.loading":       "ゲーム読込中...",
+  "game.hint_collapse": "h 折りたたむ  q 終了",
+  "game.hint_expand":   "h 展開",
+  "game.hint_quit":     "q 終了",
+
+  "quiz.name":        "クイズ",
+  "quiz.next":        "Enter / Space → 次の問題",
+  "quiz.correct":     "  ✓  正解！  ",
+  "quiz.wrong":       "  ✗  不正解  ",
+  "quiz.done":        "完了！🎉",
+  "quiz.score":       "正解  {correct} / {total}",
+  "quiz.accuracy":    "正解率  {acc}%",
+  "quiz.hint_block":  "←→ 移動  Space 選択/解除  Enter 送信",
+  "quiz.hint_choice": "←→ 移動  Space 選択  Enter 送信",
+  "quiz.multi_select": "(複数選択可)",
+
+  "outro.title":     "セッション結果",
+  "outro.accuracy":  "正解率     {val}%",
+  "outro.count":     "問題数     {val}問",
+  "outro.elapsed":   "経過時間   {val}",
+  "outro.streak":    "連続正解   {val}問",
+  "outro.bye":       "待ち時間を有効に使えました 👋",
+  "outro.countdown": "{n}秒後に閉じます..."
+}

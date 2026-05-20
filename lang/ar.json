@@ -1,0 +1,55 @@
+{
+  "lang.name": "العربية",
+  "lang.code": "ar",
+
+  "loading.packs":   "جار تحميل المحتوى...",
+  "loading.shuffle": "جار خلط الأسئلة...  ",
+  "loading.ads":     "جار جلب الإعلانات...",
+  "loading.ready":   "جاهز!               ",
+  "intro.start":     "اضغط أي مفتاح للبدء",
+
+  "lang_menu.title": "اختر اللغة",
+  "lang_menu.hint":  "↑↓ تحرك   Enter اختر",
+
+  "category_menu.title": "[ اختر الفئة ]",
+  "category_menu.hint":  "↑↓ تحرك  رقم  Enter تأكيد  q خروج",
+  "category.random":     "عشوائي",
+  "category.korean":     "كورية",
+  "category.english":    "إنجليزية",
+  "category.dev":        "تطوير",
+  "category.news":       "أخبار",
+  "category.nonsense":   "ألغاز",
+
+  "count_menu.title": "[ عدد الأسئلة ]",
+  "count_menu.desc":  "{count} من {total} سؤال",
+  "count_menu.hint":  "← → ضبط   Enter بدء   q خروج",
+
+  "ad.skip":      "  ← تخطي  ",
+  "ad.visit":     "  زيارة →  ",
+  "ad.hint":      "← → تحرك   Space / Enter تأكيد   q خروج",
+  "ad.countdown": "تخطي تلقائي بعد {sec}ث",
+
+  "game.loading":       "جار تحميل اللعبة...",
+  "game.hint_collapse": "h طي/توسيع  q خروج",
+  "game.hint_expand":   "h توسيع",
+  "game.hint_quit":     "q خروج",
+
+  "quiz.name":        "مسابقة",
+  "quiz.next":        "Enter / Space → التالي",
+  "quiz.correct":     "  ✓  صحيح!  ",
+  "quiz.wrong":       "  ✗  خطأ  ",
+  "quiz.done":        "انتهى! 🎉",
+  "quiz.score":       "{correct} / {total} صحيح",
+  "quiz.accuracy":    "الدقة  {acc}%",
+  "quiz.hint_block":  "←→ تحرك  Space اختر  Enter إرسال",
+  "quiz.hint_choice": "←→ تحرك  Space اختر  Enter إرسال",
+  "quiz.multi_select": "(اختيار متعدد)",
+
+  "outro.title":     "نتائج الجلسة",
+  "outro.accuracy":  "الدقة       {val}%",
+  "outro.count":     "الأسئلة    {val}",
+  "outro.elapsed":   "الوقت       {val}",
+  "outro.streak":    "أفضل تسلسل  {val}",
+  "outro.bye":       "أحسنت في وقت الانتظار 👋",
+  "outro.countdown": "إغلاق خلال {n}ث..."
+}

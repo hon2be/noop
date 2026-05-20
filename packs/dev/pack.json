@@ -1,0 +1,13 @@
+{
+  "id": "dev-general",
+  "version": "1.0.0",
+  "title": "개발상식",
+  "description": "Git, CS, 알고리즘, 자료구조 등 개발자 필수 상식",
+  "author": { "name": "noop" },
+  "tags": ["dev", "cs", "git", "algorithm"],
+  "lang": "ko",
+  "license": "CC-BY-4.0",
+  "games": ["quiz"],
+  "difficulty": "beginner",
+  "category": "dev"
+}

@@ -1,0 +1,13 @@
+{
+  "id": "nonsense",
+  "version": "1.0.0",
+  "title": "넌센스",
+  "description": "황당하지만 웃긴 수수께끼와 말장난",
+  "author": { "name": "noop" },
+  "tags": ["nonsense", "riddle", "fun"],
+  "lang": "ko",
+  "license": "CC-BY-4.0",
+  "games": ["quiz"],
+  "difficulty": "beginner",
+  "category": "nonsense"
+}

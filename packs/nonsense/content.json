@@ -1,0 +1,242 @@
+[
+  {
+    "subtype": "choice",
+    "question": "세상에서 가장 빠른 닭은?",
+    "options": [
+      { "id": "a", "text": "치타 닭" },
+      { "id": "b", "text": "빠른 닭" },
+      { "id": "c", "text": "후라이드 치킨" },
+      { "id": "d", "text": "익스프레스 닭" }
+    ],
+    "answer": ["c"],
+    "explanation": "'후라이드(fried)' → '날아간(flew) 닭'. 튀겨진 닭은 이미 가장 빠르게 요리됩니다. 😄"
+  },
+  {
+    "subtype": "choice",
+    "question": "피자가 웃으면?",
+    "options": [
+      { "id": "a", "text": "하하하" },
+      { "id": "b", "text": "피자웃" },
+      { "id": "c", "text": "치즈가 녹는다" },
+      { "id": "d", "text": "도우가 부풀다" }
+    ],
+    "answer": ["b"],
+    "explanation": "피자 + 웃(음) = 피자웃! 😂"
+  },
+  {
+    "subtype": "choice",
+    "question": "세상에서 가장 더운 바다는?",
+    "options": [
+      { "id": "a", "text": "태평양" },
+      { "id": "b", "text": "인도양" },
+      { "id": "c", "text": "끓는 바다" },
+      { "id": "d", "text": "열바다(열받아)" }
+    ],
+    "answer": ["d"],
+    "explanation": "열바다 = '열받아'! 세상에서 가장 더운 바다는 '열(받아) 바다'. 🌊🔥"
+  },
+  {
+    "subtype": "choice",
+    "question": "하얀 것이 검은 것을 먹으면?",
+    "options": [
+      { "id": "a", "text": "회색이 된다" },
+      { "id": "b", "text": "배가 고프다" },
+      { "id": "c", "text": "바둑이" },
+      { "id": "d", "text": "판다" }
+    ],
+    "answer": ["c"],
+    "explanation": "하얀 바둑돌이 검은 돌을 먹으면 → '바둑이' (바둑 게임에서 돌을 '먹는다'고 표현)"
+  },
+  {
+    "subtype": "choice",
+    "question": "왜 컴퓨터는 노래를 잘 못할까요?",
+    "options": [
+      { "id": "a", "text": "음치라서" },
+      { "id": "b", "text": "마이크가 없어서" },
+      { "id": "c", "text": "바이트(byte)만 알고 박자(beat)를 모르니까" },
+      { "id": "d", "text": "CPU가 바쁘니까" }
+    ],
+    "answer": ["c"],
+    "explanation": "컴퓨터는 '바이트(byte=8비트)'는 알지만 음악의 '비트(beat)'는 다르죠! 😂"
+  },
+  {
+    "subtype": "choice",
+    "question": "나무를 많이 먹은 나무는?",
+    "options": [
+      { "id": "a", "text": "참나무" },
+      { "id": "b", "text": "소나무" },
+      { "id": "c", "text": "대나무" },
+      { "id": "d", "text": "느티나무" }
+    ],
+    "answer": ["c"],
+    "explanation": "'대(大)나무' = 크게(많이) 먹은 나무! 또 대나무는 '죽(竹)'이라고도 해서 죽을 먹은 나무 😄"
+  },
+  {
+    "subtype": "choice",
+    "question": "세상에서 가장 긴 코를 가진 사람은?",
+    "options": [
+      { "id": "a", "text": "피노키오" },
+      { "id": "b", "text": "거짓말쟁이" },
+      { "id": "c", "text": "코끼리 아저씨" },
+      { "id": "d", "text": "코치(코+치)" }
+    ],
+    "answer": ["a"],
+    "explanation": "거짓말을 할 때마다 코가 자라는 피노키오! 거짓말을 많이 할수록 코가 길어지죠. 🤥"
+  },
+  {
+    "subtype": "choice",
+    "question": "자동차가 밥을 먹으면?",
+    "options": [
+      { "id": "a", "text": "배터리가 충전된다" },
+      { "id": "b", "text": "밥차" },
+      { "id": "c", "text": "엔진이 켜진다" },
+      { "id": "d", "text": "기름이 나온다" }
+    ],
+    "answer": ["b"],
+    "explanation": "자동차 + 밥 = 밥차! 급식 밥차를 떠올리면 웃음이 두 배 😂"
+  },
+  {
+    "subtype": "choice",
+    "question": "세상에서 가장 무거운 가벼운 것은?",
+    "options": [
+      { "id": "a", "text": "솜뭉치" },
+      { "id": "b", "text": "깃털" },
+      { "id": "c", "text": "가벼운 돌" },
+      { "id": "d", "text": "빛" }
+    ],
+    "answer": ["c"],
+    "explanation": "가벼운 '돌' = 가장 무거운 '가벼운' 것! '가볍다'라는 수식어가 붙어 있지만 그래도 돌은 돌 😄"
+  },
+  {
+    "subtype": "choice",
+    "question": "사자가 냉장고에 들어가려면?",
+    "options": [
+      { "id": "a", "text": "냉장고를 크게 만든다" },
+      { "id": "b", "text": "사자를 작게 만든다" },
+      { "id": "c", "text": "문을 열고 들어간다" },
+      { "id": "d", "text": "사자가 녹아야 한다" }
+    ],
+    "answer": ["c"],
+    "explanation": "그냥 문 열고 들어가면 되죠! 😂 (이 문제의 후속 문제는 '코끼리를 냉장고에 넣으려면?')"
+  },
+  {
+    "subtype": "choice",
+    "question": "눈이 없는 고양이는?",
+    "options": [
+      { "id": "a", "text": "장님 고양이" },
+      { "id": "b", "text": "고양" },
+      { "id": "c", "text": "야옹이" },
+      { "id": "d", "text": "눈먼 사랑" }
+    ],
+    "answer": ["b"],
+    "explanation": "고양이에서 '이(눈)'를 빼면 '고양'! 눈이 없으니 고양이가 아니라 고양 😄"
+  },
+  {
+    "subtype": "choice",
+    "question": "도둑이 제일 싫어하는 나라는?",
+    "options": [
+      { "id": "a", "text": "경찰 나라" },
+      { "id": "b", "text": "감옥 나라" },
+      { "id": "c", "text": "핀란드" },
+      { "id": "d", "text": "체크인 나라" }
+    ],
+    "answer": ["c"],
+    "explanation": "'핀란드' = '핀(pin) + 란(ran) + 드('d)' → 핀으로 찌르니 도둑이 제일 싫어할 나라! (핀 란 도...) 😂"
+  },
+  {
+    "subtype": "choice",
+    "question": "세상에서 가장 빠른 케이크는?",
+    "options": [
+      { "id": "a", "text": "스피드 케이크" },
+      { "id": "b", "text": "번개 케이크" },
+      { "id": "c", "text": "쇼트케이크" },
+      { "id": "d", "text": "치타 케이크" }
+    ],
+    "answer": ["c"],
+    "explanation": "쇼트케이크(Shortcake)! 'short'에서 'short cut(지름길)'을 연상하면 가장 빠른 케이크! 😄"
+  },
+  {
+    "subtype": "choice",
+    "question": "거짓말을 제일 잘 하는 나무는?",
+    "options": [
+      { "id": "a", "text": "피노키오 나무" },
+      { "id": "b", "text": "거짓나무" },
+      { "id": "c", "text": "뻥나무" },
+      { "id": "d", "text": "가짜야자" }
+    ],
+    "answer": ["c"],
+    "explanation": "뻥나무! '뻥(거짓말)' + '나무' = 뻥나무. 잘 자라려면 뻥도 잘 쳐야 한다고요? 😂"
+  },
+  {
+    "subtype": "choice",
+    "question": "얼음이 녹으면?",
+    "options": [
+      { "id": "a", "text": "물이 된다" },
+      { "id": "b", "text": "봄이 된다" },
+      { "id": "c", "text": "젖는다" },
+      { "id": "d", "text": "수증기가 된다" }
+    ],
+    "answer": ["b"],
+    "explanation": "얼음이 녹으면 봄(spring)이 된다! 사계절 중 봄은 영어로 spring이고, spring은 '녹다'라는 뜻도 있죠 😄"
+  },
+  {
+    "subtype": "choice",
+    "question": "왜 수학책은 항상 우울할까요?",
+    "options": [
+      { "id": "a", "text": "공부해야 해서" },
+      { "id": "b", "text": "문제가 너무 많아서" },
+      { "id": "c", "text": "문제(問題)가 많아서" },
+      { "id": "d", "text": "계산이 틀려서" }
+    ],
+    "answer": ["c"],
+    "explanation": "수학책은 '문제(問題/문제)'가 너무 많아서 항상 우울합니다. 문제 없는 책은 없죠! 😂"
+  },
+  {
+    "subtype": "choice",
+    "question": "세상에서 가장 용감한 나라는?",
+    "options": [
+      { "id": "a", "text": "용기 공화국" },
+      { "id": "b", "text": "불굴의 나라" },
+      { "id": "c", "text": "덴마크" },
+      { "id": "d", "text": "용용 나라" }
+    ],
+    "answer": ["c"],
+    "explanation": "'덴마크'= '덴마크'... 덴마크가 무섭지 않다고요? 사실 '덴(Den)' + '마크(mark)' → '덴마크'가 가장 용감! (억지 드립 😄)"
+  },
+  {
+    "subtype": "choice",
+    "question": "비행기 안에서 가장 빠른 것은?",
+    "options": [
+      { "id": "a", "text": "비행기 엔진" },
+      { "id": "b", "text": "승무원" },
+      { "id": "c", "text": "앞으로 달리는 사람" },
+      { "id": "d", "text": "비행기 속도" }
+    ],
+    "answer": ["c"],
+    "explanation": "비행기 안에서 앞쪽으로 뛰면 지면 기준 비행기 속도 + 달리기 속도! 세상에서 제일 빠른 사람이 됩니다 😂"
+  },
+  {
+    "subtype": "choice",
+    "question": "세상에서 제일 슬픈 과일은?",
+    "options": [
+      { "id": "a", "text": "포도" },
+      { "id": "b", "text": "사과" },
+      { "id": "c", "text": "레몬" },
+      { "id": "d", "text": "복숭아" }
+    ],
+    "answer": ["b"],
+    "explanation": "사과(謝過)! '잘못을 사과한다' = 미안한 과일. 항상 반성하고 있으니 제일 슬프죠 😂🍎"
+  },
+  {
+    "subtype": "choice",
+    "question": "아무리 배가 불러도 계속 먹는 것은?",
+    "options": [
+      { "id": "a", "text": "디저트" },
+      { "id": "b", "text": "나이" },
+      { "id": "c", "text": "공부" },
+      { "id": "d", "text": "숨" }
+    ],
+    "answer": ["b"],
+    "explanation": "나이(나이를 '먹다')! 배가 불러도 매년 한 살씩 계속 먹습니다. 멈출 수가 없어요 😂"
+  }
+]

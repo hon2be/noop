@@ -1,0 +1,13 @@
+{
+  "id": "english-lang",
+  "version": "1.0.0",
+  "title": "영어",
+  "description": "어휘, 문법, 관용표현, 영어 상식",
+  "author": { "name": "noop" },
+  "tags": ["english", "grammar", "vocabulary"],
+  "lang": "ko",
+  "license": "CC-BY-4.0",
+  "games": ["quiz"],
+  "difficulty": "beginner",
+  "category": "english"
+}

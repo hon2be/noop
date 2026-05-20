@@ -1,0 +1,69 @@
+[
+  {
+    "type": "quiz",
+    "subtype": "choice",
+    "question": "불변(immutable) 타입을 모두 고르세요",
+    "options": [
+      { "id": "o1", "text": "tuple" },
+      { "id": "o2", "text": "list" },
+      { "id": "o3", "text": "str" },
+      { "id": "o4", "text": "dict" }
+    ],
+    "answer": ["o1", "o3"],
+    "multi": true,
+    "explanation": "tuple, str, int, float 등이 불변 타입이에요."
+  },
+  {
+    "type": "quiz",
+    "subtype": "choice",
+    "question": "GIL(Global Interpreter Lock)에 대해 맞는 설명은?",
+    "options": [
+      { "id": "o1", "text": "멀티스레드 CPU 연산을 막는다" },
+      { "id": "o2", "text": "멀티프로세스도 제한한다" },
+      { "id": "o3", "text": "I/O 작업도 블로킹한다" },
+      { "id": "o4", "text": "PyPy에서도 동일하게 동작한다" }
+    ],
+    "answer": ["o1"],
+    "explanation": "GIL은 CPU 연산만 제한해요. I/O 시엔 해제돼요."
+  },
+  {
+    "type": "quiz",
+    "subtype": "choice",
+    "question": "리스트 마지막 요소에 접근하는 올바른 방법은?",
+    "options": [
+      { "id": "a", "text": "list[0]" },
+      { "id": "b", "text": "list[-1]" },
+      { "id": "c", "text": "list[last]" },
+      { "id": "d", "text": "list.end()" }
+    ],
+    "answer": ["b"],
+    "explanation": "파이썬은 음수 인덱스로 뒤에서부터 접근할 수 있어요. -1이 마지막, -2가 끝에서 두 번째."
+  },
+  {
+    "type": "quiz",
+    "subtype": "choice",
+    "question": "딕셔너리에서 키가 없을 때 기본값을 반환하는 메서드는?",
+    "options": [
+      { "id": "a", "text": "dict.find(key, default)" },
+      { "id": "b", "text": "dict.get(key, default)" },
+      { "id": "c", "text": "dict.fetch(key, default)" },
+      { "id": "d", "text": "dict.default(key)" }
+    ],
+    "answer": ["b"],
+    "explanation": "dict.get(key, default)는 KeyError 없이 안전하게 접근해요."
+  },
+  {
+    "type": "quiz",
+    "subtype": "block",
+    "question": "코드를 올바른 순서로 배열하세요",
+    "blocks": [
+      { "id": "b1", "text": "return result" },
+      { "id": "b2", "text": "result = []" },
+      { "id": "b3", "text": "for i in range(n):" },
+      { "id": "b4", "text": "  result.append(i * 2)" }
+    ],
+    "answer": ["b2", "b3", "b4", "b1"],
+    "shuffle": true,
+    "explanation": "초기화 → 루프 → 연산 → 반환 순이에요."
+  }
+]

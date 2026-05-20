@@ -1,0 +1,13 @@
+{
+  "id": "python-basic",
+  "version": "1.0.0",
+  "title": "Python 기초",
+  "description": "파이썬 입문자를 위한 퀴즈 모음",
+  "author": { "name": "noop" },
+  "tags": ["python", "beginner"],
+  "lang": "ko",
+  "license": "CC-BY-4.0",
+  "games": ["quiz"],
+  "difficulty": "beginner",
+  "category": "dev"
+}

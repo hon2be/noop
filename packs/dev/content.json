@@ -1,0 +1,244 @@
+[
+  {
+    "subtype": "choice",
+    "question": "Git에서 브랜치를 합칠 때 커밋 히스토리를 하나로 압축하는 명령어는?",
+    "options": [
+      { "id": "a", "text": "git merge" },
+      { "id": "b", "text": "git rebase" },
+      { "id": "c", "text": "git squash" },
+      { "id": "d", "text": "git cherry-pick" }
+    ],
+    "answer": ["b"],
+    "explanation": "git rebase는 커밋 히스토리를 선형으로 정리합니다. squash는 rebase의 옵션입니다."
+  },
+  {
+    "subtype": "choice",
+    "question": "배열에서 O(log n) 탐색을 수행하는 알고리즘은?",
+    "options": [
+      { "id": "a", "text": "선형 탐색" },
+      { "id": "b", "text": "이진 탐색" },
+      { "id": "c", "text": "해시 탐색" },
+      { "id": "d", "text": "DFS" }
+    ],
+    "answer": ["b"],
+    "explanation": "이진 탐색(Binary Search)은 정렬된 배열에서 절반씩 범위를 줄여가며 O(log n)에 탐색합니다."
+  },
+  {
+    "subtype": "choice",
+    "question": "HTTP 상태코드 중 클라이언트 요청 오류를 나타내는 범위는?",
+    "options": [
+      { "id": "a", "text": "1xx" },
+      { "id": "b", "text": "2xx" },
+      { "id": "c", "text": "3xx" },
+      { "id": "d", "text": "4xx" }
+    ],
+    "answer": ["d"],
+    "explanation": "4xx는 클라이언트 오류(404 Not Found 등), 5xx는 서버 오류입니다."
+  },
+  {
+    "subtype": "block",
+    "question": "TCP/IP 계층을 아래에서 위 순서(하위→상위)로 정렬하세요.",
+    "blocks": [
+      { "id": 1, "text": "네트워크 접근 계층" },
+      { "id": 2, "text": "인터넷 계층" },
+      { "id": 3, "text": "전송 계층" },
+      { "id": 4, "text": "응용 계층" }
+    ],
+    "answer": [1, 2, 3, 4],
+    "shuffle": true,
+    "explanation": "TCP/IP 4계층: 네트워크 접근 → 인터넷(IP) → 전송(TCP/UDP) → 응용(HTTP 등)"
+  },
+  {
+    "subtype": "choice",
+    "question": "SOLID 원칙 중 '클래스는 하나의 책임만 가져야 한다'는 원칙은?",
+    "options": [
+      { "id": "a", "text": "단일 책임 원칙 (SRP)" },
+      { "id": "b", "text": "개방-폐쇄 원칙 (OCP)" },
+      { "id": "c", "text": "리스코프 치환 원칙 (LSP)" },
+      { "id": "d", "text": "의존 역전 원칙 (DIP)" }
+    ],
+    "answer": ["a"],
+    "explanation": "SRP(Single Responsibility Principle): 클래스를 변경해야 하는 이유는 오직 하나여야 합니다."
+  },
+  {
+    "subtype": "choice",
+    "question": "다음 중 스택(Stack)의 특성을 올바르게 설명한 것은?",
+    "options": [
+      { "id": "a", "text": "FIFO (먼저 넣은 것이 먼저 나옴)" },
+      { "id": "b", "text": "LIFO (나중에 넣은 것이 먼저 나옴)" },
+      { "id": "c", "text": "양쪽에서 삽입/삭제 가능" },
+      { "id": "d", "text": "우선순위 기반 정렬" }
+    ],
+    "answer": ["b"],
+    "explanation": "스택은 LIFO(Last In First Out). 반대로 큐(Queue)는 FIFO(First In First Out)입니다."
+  },
+  {
+    "subtype": "choice",
+    "question": "REST API에서 리소스를 생성할 때 사용하는 HTTP 메서드는?",
+    "options": [
+      { "id": "a", "text": "GET" },
+      { "id": "b", "text": "POST" },
+      { "id": "c", "text": "PUT" },
+      { "id": "d", "text": "DELETE" }
+    ],
+    "answer": ["b"],
+    "explanation": "POST = 생성, GET = 조회, PUT/PATCH = 수정, DELETE = 삭제"
+  },
+  {
+    "subtype": "choice",
+    "question": "다음 중 시간 복잡도가 O(1)인 연산은?",
+    "options": [
+      { "id": "a", "text": "정렬된 배열에서 이진 탐색" },
+      { "id": "b", "text": "해시 테이블에서 키 조회" },
+      { "id": "c", "text": "연결 리스트 끝에 삽입" },
+      { "id": "d", "text": "힙(Heap)에서 최솟값 추출" }
+    ],
+    "answer": ["b"],
+    "explanation": "해시 테이블 조회는 평균 O(1). 이진 탐색 O(log n), 연결 리스트 끝 삽입 O(n), 힙 추출 O(log n)."
+  },
+  {
+    "subtype": "choice",
+    "question": "SQL에서 테이블 간 공통 컬럼을 기준으로 데이터를 합치는 쿼리는?",
+    "options": [
+      { "id": "a", "text": "UNION" },
+      { "id": "b", "text": "JOIN" },
+      { "id": "c", "text": "MERGE" },
+      { "id": "d", "text": "INTERSECT" }
+    ],
+    "answer": ["b"],
+    "explanation": "JOIN은 두 테이블의 관련 컬럼을 기준으로 행을 결합합니다. UNION은 행을 세로로 합칩니다."
+  },
+  {
+    "subtype": "choice",
+    "question": "Docker 컨테이너와 가상머신(VM)의 차이로 올바른 것은?",
+    "options": [
+      { "id": "a", "text": "컨테이너는 OS 커널을 공유하고, VM은 독립 OS를 가진다" },
+      { "id": "b", "text": "VM이 컨테이너보다 가볍고 빠르다" },
+      { "id": "c", "text": "컨테이너는 보안이 VM보다 강하다" },
+      { "id": "d", "text": "VM은 도커 이미지를 사용한다" }
+    ],
+    "answer": ["a"],
+    "explanation": "컨테이너는 호스트 OS 커널을 공유해 가볍고 빠릅니다. VM은 하이퍼바이저 위에 별도 OS를 올립니다."
+  },
+  {
+    "subtype": "choice",
+    "question": "정규 표현식에서 '0개 이상'을 의미하는 수량자는?",
+    "options": [
+      { "id": "a", "text": "+" },
+      { "id": "b", "text": "?" },
+      { "id": "c", "text": "*" },
+      { "id": "d", "text": "{n}" }
+    ],
+    "answer": ["c"],
+    "explanation": "* = 0개 이상, + = 1개 이상, ? = 0 또는 1개, {n} = 정확히 n개."
+  },
+  {
+    "subtype": "choice",
+    "question": "Git에서 이전 커밋으로 되돌리되 새 커밋을 생성하는 명령어는?",
+    "options": [
+      { "id": "a", "text": "git reset --hard" },
+      { "id": "b", "text": "git checkout" },
+      { "id": "c", "text": "git revert" },
+      { "id": "d", "text": "git stash" }
+    ],
+    "answer": ["c"],
+    "explanation": "git revert는 변경사항을 되돌리는 새 커밋을 생성합니다. 공유 브랜치에서 안전하게 되돌릴 때 사용."
+  },
+  {
+    "subtype": "choice",
+    "question": "다음 중 NoSQL 데이터베이스가 아닌 것은?",
+    "options": [
+      { "id": "a", "text": "MongoDB" },
+      { "id": "b", "text": "Redis" },
+      { "id": "c", "text": "PostgreSQL" },
+      { "id": "d", "text": "Cassandra" }
+    ],
+    "answer": ["c"],
+    "explanation": "PostgreSQL은 관계형(SQL) 데이터베이스입니다. MongoDB(문서), Redis(키-값), Cassandra(컬럼)는 NoSQL."
+  },
+  {
+    "subtype": "choice",
+    "question": "CI/CD에서 CI는 무엇의 약자인가요?",
+    "options": [
+      { "id": "a", "text": "Code Integration" },
+      { "id": "b", "text": "Continuous Integration" },
+      { "id": "c", "text": "Container Infrastructure" },
+      { "id": "d", "text": "Cloud Instance" }
+    ],
+    "answer": ["b"],
+    "explanation": "CI = Continuous Integration(지속적 통합), CD = Continuous Delivery/Deployment(지속적 배포)."
+  },
+  {
+    "subtype": "block",
+    "question": "Big-O 표기법을 빠른 순서(빠름→느림)로 정렬하세요.",
+    "blocks": [
+      { "id": 1, "text": "O(1)" },
+      { "id": 2, "text": "O(log n)" },
+      { "id": 3, "text": "O(n)" },
+      { "id": 4, "text": "O(n²)" }
+    ],
+    "answer": [1, 2, 3, 4],
+    "shuffle": true,
+    "explanation": "빠른 순: O(1) 상수 > O(log n) 로그 > O(n) 선형 > O(n²) 이차. 알고리즘 성능의 핵심."
+  },
+  {
+    "subtype": "choice",
+    "question": "객체지향 프로그래밍의 4대 특성이 아닌 것은?",
+    "options": [
+      { "id": "a", "text": "캡슐화" },
+      { "id": "b", "text": "상속" },
+      { "id": "c", "text": "직렬화" },
+      { "id": "d", "text": "다형성" }
+    ],
+    "answer": ["c"],
+    "explanation": "OOP 4대 특성: 캡슐화, 상속, 다형성, 추상화. 직렬화(Serialization)는 별도 개념입니다."
+  },
+  {
+    "subtype": "choice",
+    "question": "HTTPS에서 데이터 암호화에 사용되는 프로토콜은?",
+    "options": [
+      { "id": "a", "text": "FTP" },
+      { "id": "b", "text": "TLS/SSL" },
+      { "id": "c", "text": "SSH" },
+      { "id": "d", "text": "SMTP" }
+    ],
+    "answer": ["b"],
+    "explanation": "HTTPS = HTTP + TLS(Transport Layer Security). 이전에는 SSL이 사용됐으나 현재는 TLS가 표준."
+  },
+  {
+    "subtype": "choice",
+    "question": "마이크로서비스 아키텍처의 장점으로 올바르지 않은 것은?",
+    "options": [
+      { "id": "a", "text": "독립적인 배포 가능" },
+      { "id": "b", "text": "서비스별 기술 스택 선택 가능" },
+      { "id": "c", "text": "단순한 디버깅과 트랜잭션 관리" },
+      { "id": "d", "text": "장애 격리 (한 서비스 장애가 전파 안 됨)" }
+    ],
+    "answer": ["c"],
+    "explanation": "마이크로서비스는 분산 시스템이라 디버깅, 분산 트랜잭션 관리가 모놀리식보다 복잡합니다."
+  },
+  {
+    "subtype": "choice",
+    "question": "함수형 프로그래밍에서 동일 입력에 항상 동일 출력을 반환하고 부작용이 없는 함수를?",
+    "options": [
+      { "id": "a", "text": "고차 함수 (Higher-order function)" },
+      { "id": "b", "text": "순수 함수 (Pure function)" },
+      { "id": "c", "text": "익명 함수 (Anonymous function)" },
+      { "id": "d", "text": "커링 함수 (Currying)" }
+    ],
+    "answer": ["b"],
+    "explanation": "순수 함수: 같은 입력 → 항상 같은 출력, 외부 상태를 변경하지 않음. 테스트와 병렬 처리에 유리."
+  },
+  {
+    "subtype": "choice",
+    "question": "웹에서 Cross-Origin 요청을 허용하는 HTTP 헤더 메커니즘은?",
+    "options": [
+      { "id": "a", "text": "CSRF" },
+      { "id": "b", "text": "CORS" },
+      { "id": "c", "text": "CSP" },
+      { "id": "d", "text": "XSS" }
+    ],
+    "answer": ["b"],
+    "explanation": "CORS(Cross-Origin Resource Sharing): 다른 도메인에서의 리소스 요청을 서버가 허용하는 HTTP 헤더 방식."
+  }
+]

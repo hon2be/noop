@@ -1,0 +1,13 @@
+{
+  "id": "news-general",
+  "version": "1.0.0",
+  "title": "시사상식",
+  "description": "역사, 지리, 사회, 경제 등 교양 상식",
+  "author": { "name": "noop" },
+  "tags": ["news", "history", "society", "general-knowledge"],
+  "lang": "ko",
+  "license": "CC-BY-4.0",
+  "games": ["quiz"],
+  "difficulty": "beginner",
+  "category": "news"
+}

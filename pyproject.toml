@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "noop"
+version = "0.1.0"
+description = "터미널 에이전트 유휴 시간에 미니게임 + 퀴즈를 띄우는 Claude Code 스킬"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+
+[project.scripts]
+noop = "noop.__main__:run"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["noop*"]
+
+[tool.setuptools.package-data]
+noop = ["py.typed"]

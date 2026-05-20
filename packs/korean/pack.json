@@ -1,0 +1,13 @@
+{
+  "id": "korean-lang",
+  "version": "1.0.0",
+  "title": "한국어",
+  "description": "맞춤법, 띄어쓰기, 속담, 사자성어, 문학 상식",
+  "author": { "name": "noop" },
+  "tags": ["korean", "grammar", "proverb"],
+  "lang": "ko",
+  "license": "CC-BY-4.0",
+  "games": ["quiz"],
+  "difficulty": "beginner",
+  "category": "korean"
+}

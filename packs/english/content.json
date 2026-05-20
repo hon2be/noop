@@ -1,0 +1,244 @@
+[
+  {
+    "subtype": "choice",
+    "question": "'It's raining cats and dogs'의 올바른 의미는?",
+    "options": [
+      { "id": "a", "text": "고양이와 개가 싸우고 있다" },
+      { "id": "b", "text": "비가 억수같이 쏟아진다" },
+      { "id": "c", "text": "날씨가 변덕스럽다" },
+      { "id": "d", "text": "동물들이 비를 좋아한다" }
+    ],
+    "answer": ["b"],
+    "explanation": "'It's raining cats and dogs' = 비가 엄청나게 쏟아진다는 영어 관용 표현."
+  },
+  {
+    "subtype": "choice",
+    "question": "영어 현재완료 시제의 올바른 형태는?",
+    "options": [
+      { "id": "a", "text": "have/has + 동사원형" },
+      { "id": "b", "text": "have/has + 과거분사(p.p.)" },
+      { "id": "c", "text": "did + 동사원형" },
+      { "id": "d", "text": "will + 동사원형" }
+    ],
+    "answer": ["b"],
+    "explanation": "현재완료: have/has + 과거분사(p.p.). 예: I have eaten. / She has gone."
+  },
+  {
+    "subtype": "choice",
+    "question": "다음 중 'break a leg'의 뜻으로 올바른 것은?",
+    "options": [
+      { "id": "a", "text": "다리가 부러지다" },
+      { "id": "b", "text": "열심히 달리다" },
+      { "id": "c", "text": "행운을 빌다" },
+      { "id": "d", "text": "무대에 오르다" }
+    ],
+    "answer": ["c"],
+    "explanation": "'Break a leg!'는 공연 전에 '잘 해봐, 행운을 빌어!'라고 말할 때 쓰는 표현."
+  },
+  {
+    "subtype": "block",
+    "question": "올바른 영어 문장 어순으로 정렬하세요: 'I / coffee / every morning / drink'",
+    "blocks": [
+      { "id": 1, "text": "I" },
+      { "id": 2, "text": "drink" },
+      { "id": 3, "text": "coffee" },
+      { "id": 4, "text": "every morning" }
+    ],
+    "answer": [1, 2, 3, 4],
+    "shuffle": true,
+    "explanation": "영어 기본 어순: 주어(I) + 동사(drink) + 목적어(coffee) + 부사구(every morning)"
+  },
+  {
+    "subtype": "choice",
+    "question": "다음 단어 중 명사(Noun)가 아닌 것은?",
+    "options": [
+      { "id": "a", "text": "freedom" },
+      { "id": "b", "text": "quickly" },
+      { "id": "c", "text": "happiness" },
+      { "id": "d", "text": "knowledge" }
+    ],
+    "answer": ["b"],
+    "explanation": "'quickly'는 부사(adverb). freedom, happiness, knowledge는 모두 명사(noun)."
+  },
+  {
+    "subtype": "choice",
+    "question": "'I ___ a book last night.' — 빈칸에 들어갈 read의 형태는?",
+    "options": [
+      { "id": "a", "text": "read (현재형)" },
+      { "id": "b", "text": "reads" },
+      { "id": "c", "text": "read (과거형, 발음 [red])" },
+      { "id": "d", "text": "readed" }
+    ],
+    "answer": ["c"],
+    "explanation": "'read'의 과거형도 'read'이지만 발음이 [red]로 달라집니다. 불규칙 동사입니다."
+  },
+  {
+    "subtype": "choice",
+    "question": "'The ball was kicked by Tom'은 어떤 형태의 문장인가요?",
+    "options": [
+      { "id": "a", "text": "능동태 (Active voice)" },
+      { "id": "b", "text": "수동태 (Passive voice)" },
+      { "id": "c", "text": "가정법 (Subjunctive)" },
+      { "id": "d", "text": "명령문 (Imperative)" }
+    ],
+    "answer": ["b"],
+    "explanation": "수동태: be동사 + 과거분사(p.p.). 'was kicked'가 수동태 형태. 능동태는 'Tom kicked the ball'."
+  },
+  {
+    "subtype": "choice",
+    "question": "영어로 '그렇지 않니?'처럼 확인을 구하는 표현을 무엇이라 하나요?",
+    "options": [
+      { "id": "a", "text": "Tag question (부가의문문)" },
+      { "id": "b", "text": "Rhetorical question" },
+      { "id": "c", "text": "Indirect question" },
+      { "id": "d", "text": "Embedded question" }
+    ],
+    "answer": ["a"],
+    "explanation": "Tag question: 'It's hot, isn't it?' 처럼 문장 뒤에 짧은 의문문을 붙여 동의나 확인을 구하는 형태."
+  },
+  {
+    "subtype": "choice",
+    "question": "다음 중 'bite the bullet'의 뜻은?",
+    "options": [
+      { "id": "a", "text": "총알을 피하다" },
+      { "id": "b", "text": "고통스러운 상황을 참고 견디다" },
+      { "id": "c", "text": "위험을 무릅쓰다" },
+      { "id": "d", "text": "빠르게 해결하다" }
+    ],
+    "answer": ["b"],
+    "explanation": "'Bite the bullet': 마취제 없이 수술할 때 총알을 깨물어 고통을 참던 데서 유래. 힘든 일을 참고 감내한다는 뜻."
+  },
+  {
+    "subtype": "choice",
+    "question": "영어 가정법 과거의 올바른 구조는?",
+    "options": [
+      { "id": "a", "text": "If + 현재형, would + 동사원형" },
+      { "id": "b", "text": "If + 과거형, would + 동사원형" },
+      { "id": "c", "text": "If + 과거완료, would have + p.p." },
+      { "id": "d", "text": "If + 현재완료, would + 동사원형" }
+    ],
+    "answer": ["b"],
+    "explanation": "가정법 과거: If + 과거형(were/일반 동사 과거), would/could/might + 동사원형. 현재 사실의 반대 가정."
+  },
+  {
+    "subtype": "choice",
+    "question": "'Once in a blue moon'의 올바른 의미는?",
+    "options": [
+      { "id": "a", "text": "밤하늘이 아름답다" },
+      { "id": "b", "text": "아주 가끔, 드물게" },
+      { "id": "c", "text": "갑자기 일어나다" },
+      { "id": "d", "text": "한 달에 한 번" }
+    ],
+    "answer": ["b"],
+    "explanation": "Blue moon은 한 달에 두 번 뜨는 보름달(매우 드문 일) → 'once in a blue moon' = 아주 가끔."
+  },
+  {
+    "subtype": "choice",
+    "question": "다음 중 전치사 사용이 올바른 문장은?",
+    "options": [
+      { "id": "a", "text": "I was born in 1995." },
+      { "id": "b", "text": "I was born on 1995." },
+      { "id": "c", "text": "I was born at 1995." },
+      { "id": "d", "text": "I was born by 1995." }
+    ],
+    "answer": ["a"],
+    "explanation": "연도 앞에는 'in' 사용: in 1995, in March. 날짜 앞은 'on': on Monday. 시각 앞은 'at': at 3pm."
+  },
+  {
+    "subtype": "choice",
+    "question": "영어 단어 'serendipity'의 뜻은?",
+    "options": [
+      { "id": "a", "text": "슬픔, 비탄" },
+      { "id": "b", "text": "예기치 않은 행운, 우연한 발견" },
+      { "id": "c", "text": "평온함, 고요함" },
+      { "id": "d", "text": "열정, 의욕" }
+    ],
+    "answer": ["b"],
+    "explanation": "Serendipity: 우연히 뜻밖의 행운을 발견하는 능력 또는 그 행운. 영어권에서 가장 아름다운 단어 중 하나로 꼽힘."
+  },
+  {
+    "subtype": "block",
+    "question": "영어 5형식 문장의 기본 어순을 정렬하세요.",
+    "blocks": [
+      { "id": 1, "text": "주어(S)" },
+      { "id": 2, "text": "동사(V)" },
+      { "id": 3, "text": "목적어(O)" },
+      { "id": 4, "text": "목적보어(OC)" }
+    ],
+    "answer": [1, 2, 3, 4],
+    "shuffle": true,
+    "explanation": "5형식: S + V + O + OC. 예: 'They made him captain.' (그들은 그를 주장으로 만들었다.)"
+  },
+  {
+    "subtype": "choice",
+    "question": "다음 중 'spill the beans'의 뜻은?",
+    "options": [
+      { "id": "a", "text": "콩을 쏟다" },
+      { "id": "b", "text": "비밀을 누설하다" },
+      { "id": "c", "text": "큰 실수를 저지르다" },
+      { "id": "d", "text": "음식을 낭비하다" }
+    ],
+    "answer": ["b"],
+    "explanation": "'Spill the beans' = 비밀을 (무심코) 누설하다. 예: She spilled the beans about the surprise party."
+  },
+  {
+    "subtype": "choice",
+    "question": "영어에서 축약형 'it's'와 소유격 'its'의 차이는?",
+    "options": [
+      { "id": "a", "text": "둘 다 소유를 나타낸다" },
+      { "id": "b", "text": "it's = it is/it has, its = 소유격" },
+      { "id": "c", "text": "its = it is, it's = 소유격" },
+      { "id": "d", "text": "발음만 다르고 뜻은 같다" }
+    ],
+    "answer": ["b"],
+    "explanation": "it's = it is 또는 it has의 축약. its = it의 소유격(소유격에는 어퍼스트로피 없음). 매우 흔한 오류!"
+  },
+  {
+    "subtype": "choice",
+    "question": "'The pen is mightier than the sword'에서 사용된 수사법은?",
+    "options": [
+      { "id": "a", "text": "직유(Simile)" },
+      { "id": "b", "text": "은유(Metaphor)" },
+      { "id": "c", "text": "제유(Metonymy)" },
+      { "id": "d", "text": "반어(Irony)" }
+    ],
+    "answer": ["c"],
+    "explanation": "제유(Metonymy): 연관된 것으로 대체. pen = 글쓰기/지식, sword = 폭력/무력을 의미. '펜이 칼보다 강하다'."
+  },
+  {
+    "subtype": "choice",
+    "question": "다음 중 'to let the cat out of the bag'의 의미는?",
+    "options": [
+      { "id": "a", "text": "고양이를 가방에서 꺼내다" },
+      { "id": "b", "text": "비밀을 실수로 발설하다" },
+      { "id": "c", "text": "문제를 해결하다" },
+      { "id": "d", "text": "도망가게 놔두다" }
+    ],
+    "answer": ["b"],
+    "explanation": "옛날 시장에서 돼지 대신 고양이를 자루에 넣어 속이다 들켰다는 이야기에서 유래. 비밀을 누설하다."
+  },
+  {
+    "subtype": "choice",
+    "question": "영어로 과거의 습관적 행동을 나타낼 때 쓰는 표현은?",
+    "options": [
+      { "id": "a", "text": "used to + 동사원형" },
+      { "id": "b", "text": "use to + 동사원형" },
+      { "id": "c", "text": "would have + p.p." },
+      { "id": "d", "text": "should + 동사원형" }
+    ],
+    "answer": ["a"],
+    "explanation": "'used to + 동사원형': 과거의 습관이나 상태(현재는 그렇지 않음). I used to play soccer. (어릴 때 축구를 했었다.)"
+  },
+  {
+    "subtype": "choice",
+    "question": "영어 단어 'procrastinate'의 뜻은?",
+    "options": [
+      { "id": "a", "text": "서두르다, 앞당기다" },
+      { "id": "b", "text": "미루다, 연기하다" },
+      { "id": "c", "text": "집중하다, 몰두하다" },
+      { "id": "d", "text": "축하하다, 기념하다" }
+    ],
+    "answer": ["b"],
+    "explanation": "Procrastinate: 해야 할 일을 나중으로 미루다. 'Stop procrastinating and do your homework!' (숙제 미루지 마!)"
+  }
+]
