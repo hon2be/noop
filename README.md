@@ -86,7 +86,7 @@ packs/
 
 ## 스폰서
 
-[![코카콜라 오리지널, 190ml, 30개](assets/coupang_banner.jpg)](https://link.coupang.com/a/dUby3Irms8)
+<a href="https://link.coupang.com/a/dUby3Irms8" target="_blank" referrerpolicy="unsafe-url"><img src="assets/coupang_banner.jpg" alt="코카콜라 오리지널, 190ml, 30개" width="120" height="240"></a>
 
 > 이 프로젝트는 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.
 
