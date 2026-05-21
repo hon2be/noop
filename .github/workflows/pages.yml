@@ -1,0 +1,78 @@
+name: GitHub Pages 배포
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "docs/**"        # 랜딩 페이지 변경 시
+      - "README.md"      # README 변경 시 (필요하다면 docs에 반영)
+  workflow_dispatch:     # 수동 트리거 허용
+
+# GitHub Pages 배포에 필요한 권한
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 동시에 하나의 배포만 허용 (진행 중인 배포는 취소하지 않음)
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: 페이지 빌드
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: HTML 유효성 간단 검사
+        run: |
+          python3 - <<'EOF'
+          import pathlib, sys, re
+
+          index = pathlib.Path("docs/index.html")
+          if not index.exists():
+              print("❌ docs/index.html 파일이 없습니다")
+              sys.exit(1)
+
+          content = index.read_text(encoding="utf-8")
+
+          checks = [
+              ("<!DOCTYPE html>",  "DOCTYPE 선언"),
+              ("<html",            "<html> 태그"),
+              ("<title>",          "<title> 태그"),
+              ("</body>",          "</body> 닫힘"),
+              ("</html>",          "</html> 닫힘"),
+          ]
+
+          errors = []
+          for needle, label in checks:
+              if needle.lower() not in content.lower():
+                  errors.append(f"'{label}' 없음")
+
+          if errors:
+              for e in errors:
+                  print(f"❌ {e}")
+              sys.exit(1)
+
+          size_kb = len(content.encode()) / 1024
+          print(f"✅ docs/index.html 유효 ({size_kb:.1f} KB)")
+          EOF
+
+      - name: Pages 아티팩트 업로드
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs/
+
+  deploy:
+    name: 페이지 배포
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: GitHub Pages에 배포
+        id: deployment
+        uses: actions/deploy-pages@v4
