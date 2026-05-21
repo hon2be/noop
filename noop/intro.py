@@ -2,10 +2,11 @@
 noop — intro.py
 인트로 / 아웃트로 화면
 """
+
 import curses
 import time
 from .renderer import draw_text_center, draw_box, draw_progress_bar, get_game_size
-from .i18n     import t
+from .i18n import t
 
 LOGO = [
     r" ███╗   ██╗ ██████╗  ██████╗ ██████╗ ",
@@ -17,11 +18,12 @@ LOGO = [
 ]
 TAGLINE = "while you wait."
 
+
 def _loading_stages():
     return [
-        (20,  t("loading.packs")),
-        (50,  t("loading.shuffle")),
-        (80,  t("loading.ads")),
+        (20, t("loading.packs")),
+        (50, t("loading.shuffle")),
+        (80, t("loading.ads")),
         (100, t("loading.ready")),
     ]
 
@@ -79,17 +81,17 @@ def render_outro(stdscr, stats: dict):
     draw_box(stdscr, oy, ox, h, w)
 
     lines = [
-        (t("outro.title"),                    curses.A_BOLD),
-        ("─" * (w // 2),                   curses.A_DIM),
-        ("",                               0),
-        (t("outro.accuracy", val=stats.get("accuracy", 0)),   0),
-        (t("outro.count", val=stats.get("count", 0)),   0),
-        (t("outro.elapsed", val=stats.get("elapsed", "N/A")),  0),
-        (t("outro.streak", val=stats.get("streak", 0)),    0),
-        ("",                               0),
-        ("─" * (w // 2),                   curses.A_DIM),
-        ("",                               0),
-        (t("outro.bye"),   curses.A_BOLD),
+        (t("outro.title"), curses.A_BOLD),
+        ("─" * (w // 2), curses.A_DIM),
+        ("", 0),
+        (t("outro.accuracy", val=stats.get("accuracy", 0)), 0),
+        (t("outro.count", val=stats.get("count", 0)), 0),
+        (t("outro.elapsed", val=stats.get("elapsed", "N/A")), 0),
+        (t("outro.streak", val=stats.get("streak", 0)), 0),
+        ("", 0),
+        ("─" * (w // 2), curses.A_DIM),
+        ("", 0),
+        (t("outro.bye"), curses.A_BOLD),
     ]
 
     start_y = oy + (h - len(lines)) // 2

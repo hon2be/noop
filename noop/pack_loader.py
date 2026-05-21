@@ -2,6 +2,7 @@
 noop — pack_loader.py
 팩 디렉토리를 스캔하여 카테고리별 문제 목록을 반환.
 """
+
 import json
 import os
 import pathlib
@@ -9,11 +10,11 @@ import random
 
 # 카테고리 매핑 (표시명 → 내부 키)
 CATEGORIES = {
-    "random":   "랜덤",
-    "korean":   "한국어",
-    "english":  "영어",
-    "dev":      "개발상식",
-    "news":     "시사상식",
+    "random": "랜덤",
+    "korean": "한국어",
+    "english": "영어",
+    "dev": "개발상식",
+    "news": "시사상식",
     "nonsense": "넌센스",
 }
 
@@ -31,13 +32,15 @@ def discover_packs(packs_dir: str = _DEFAULT_PACKS_DIR) -> list[dict]:
         return result
 
     for entry in sorted(os.listdir(packs_dir)):
-        pack_dir  = os.path.join(packs_dir, entry)
+        pack_dir = os.path.join(packs_dir, entry)
         pack_json = os.path.join(pack_dir, "pack.json")
-        content   = os.path.join(pack_dir, "content.json")
+        content = os.path.join(pack_dir, "content.json")
 
-        if not (os.path.isdir(pack_dir) and
-                os.path.isfile(pack_json) and
-                os.path.isfile(content)):
+        if not (
+            os.path.isdir(pack_dir)
+            and os.path.isfile(pack_json)
+            and os.path.isfile(content)
+        ):
             continue
 
         try:
@@ -50,15 +53,15 @@ def discover_packs(packs_dir: str = _DEFAULT_PACKS_DIR) -> list[dict]:
     return result
 
 
-def load_items(category: str = "random",
-               packs_dir: str = _DEFAULT_PACKS_DIR,
-               shuffle: bool = True) -> list[dict]:
+def load_items(
+    category: str = "random", packs_dir: str = _DEFAULT_PACKS_DIR, shuffle: bool = True
+) -> list[dict]:
     """
     카테고리에 해당하는 모든 팩을 로드해 문제 리스트를 합쳐 반환.
     category: "random" | "korean" | "english" | "dev" | "news" | "nonsense"
     """
-    packs   = discover_packs(packs_dir)
-    items   = []
+    packs = discover_packs(packs_dir)
+    items = []
 
     for pack in packs:
         meta = pack["meta"]

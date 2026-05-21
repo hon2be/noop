@@ -19,15 +19,16 @@ from typing import Optional
 
 # ── 광고 데이터 모델 ────────────────────────────────────────────
 
+
 @dataclass
 class Ad:
-    headline: str        # 짧은 제목
-    content: str         # 본문
-    cta: str             # Call to action (예: "Try free →")
-    link: str            # 클릭 URL
-    view_url: str        # 노출 추적 URL (빈 문자열이면 추적 없음)
-    source: str          # "self" | "ethicalads"
-    ascii_art: list      = field(default_factory=list)
+    headline: str  # 짧은 제목
+    content: str  # 본문
+    cta: str  # Call to action (예: "Try free →")
+    link: str  # 클릭 URL
+    view_url: str  # 노출 추적 URL (빈 문자열이면 추적 없음)
+    source: str  # "self" | "ethicalads"
+    ascii_art: list = field(default_factory=list)
     # 사진 기반 아스키아트 (문자열 라인 배열). 없으면 빈 리스트.
 
     def to_banner_lines(self, width: int = 46) -> list[str]:
@@ -58,6 +59,7 @@ class Ad:
 
 
 # ── 베이스 프로바이더 ────────────────────────────────────────────
+
 
 class BaseAdProvider:
     name = "base"
@@ -100,13 +102,15 @@ class SelfAdProvider(BaseAdProvider):
       "view_url": ""
     }
     """
+
     name = "self"
 
-    def __init__(self, server_url: str = None, keywords: list[str] = None,
-                 ads_file: str = None):
+    def __init__(
+        self, server_url: str = None, keywords: list[str] = None, ads_file: str = None
+    ):
         self.server_url = server_url.rstrip("/") if server_url else None
-        self.keywords   = keywords or ["developer", "cli"]
-        self.ads_file   = ads_file or _DEFAULT_ADS_FILE
+        self.keywords = keywords or ["developer", "cli"]
+        self.ads_file = ads_file or _DEFAULT_ADS_FILE
 
     def fetch(self) -> Optional[Ad]:
         if self.server_url:
@@ -115,7 +119,7 @@ class SelfAdProvider(BaseAdProvider):
 
     def _fetch_remote(self) -> Optional[Ad]:
         try:
-            kw  = ",".join(self.keywords)
+            kw = ",".join(self.keywords)
             url = f"{self.server_url}/ad?keywords={kw}"
             raw = self._get(url)
             return self._parse(raw)
@@ -125,6 +129,7 @@ class SelfAdProvider(BaseAdProvider):
     def _fetch_local(self) -> Optional[Ad]:
         """ads/ads.json 에서 랜덤 1개 반환."""
         import random
+
         try:
             with open(self.ads_file, encoding="utf-8") as f:
                 ads = json.load(f)
@@ -137,17 +142,18 @@ class SelfAdProvider(BaseAdProvider):
 
     def _parse(self, raw: dict) -> Ad:
         return Ad(
-            headline  = raw.get("headline", ""),
-            content   = raw.get("content", ""),
-            cta       = raw.get("cta", ""),
-            link      = raw.get("link", ""),
-            view_url  = raw.get("view_url", ""),
-            source    = "self",
-            ascii_art = raw.get("ascii_art", []),
+            headline=raw.get("headline", ""),
+            content=raw.get("content", ""),
+            cta=raw.get("cta", ""),
+            link=raw.get("link", ""),
+            view_url=raw.get("view_url", ""),
+            source="self",
+            ascii_art=raw.get("ascii_art", []),
         )
 
 
 # ── 2. EthicalAds ────────────────────────────────────────────────
+
 
 class EthicalAdsProvider(BaseAdProvider):
     """
@@ -158,35 +164,38 @@ class EthicalAdsProvider(BaseAdProvider):
       ETHICALADS_TOKEN     — API 토큰
       ETHICALADS_PUBLISHER — publisher slug
     """
-    name      = "ethicalads"
-    API_URL   = "https://server.ethicalads.io/api/v1/decision/"
+
+    name = "ethicalads"
+    API_URL = "https://server.ethicalads.io/api/v1/decision/"
 
     def __init__(self, token: str, publisher: str, keywords: list[str] = None):
-        self.token     = token
+        self.token = token
         self.publisher = publisher
-        self.keywords  = keywords or ["python", "cli", "developer-tools"]
+        self.keywords = keywords or ["python", "cli", "developer-tools"]
 
     def fetch(self) -> Optional[Ad]:
         try:
             headers = {"Authorization": f"Token {self.token}"}
             payload = {
                 "publisher": self.publisher,
-                "placements": [{
-                    "div_id":  "noop-terminal",
-                    "ad_type": "text-v1",
-                }],
-                "keywords":       self.keywords,
+                "placements": [
+                    {
+                        "div_id": "noop-terminal",
+                        "ad_type": "text-v1",
+                    }
+                ],
+                "keywords": self.keywords,
                 "campaign_types": ["paid"],
             }
-            raw  = self._post(self.API_URL, payload, headers)
+            raw = self._post(self.API_URL, payload, headers)
             copy = raw.get("copy", {})
             return Ad(
-                headline = copy.get("headline", ""),
-                content  = copy.get("content", raw.get("body", "")),
-                cta      = copy.get("cta", ""),
-                link     = raw.get("link", ""),
-                view_url = raw.get("view_url", ""),
-                source   = "ethicalads",
+                headline=copy.get("headline", ""),
+                content=copy.get("content", raw.get("body", "")),
+                cta=copy.get("cta", ""),
+                link=raw.get("link", ""),
+                view_url=raw.get("view_url", ""),
+                source="ethicalads",
             )
         except Exception:
             return None
@@ -195,7 +204,7 @@ class EthicalAdsProvider(BaseAdProvider):
 # ── AdClient (통합 진입점) ────────────────────────────────────────
 
 CACHE_FILE = os.path.join(os.path.dirname(__file__), ".ad_cache.json")
-CACHE_TTL  = 3600  # 1시간 캐시
+CACHE_TTL = 3600  # 1시간 캐시
 
 
 class AdClient:
@@ -207,10 +216,10 @@ class AdClient:
 
     def __init__(
         self,
-        self_url:       Optional[str] = None,
-        ethical_token:  Optional[str] = None,
-        ethical_pub:    Optional[str] = None,
-        keywords:       list[str] = None,
+        self_url: Optional[str] = None,
+        ethical_token: Optional[str] = None,
+        ethical_pub: Optional[str] = None,
+        keywords: list[str] = None,
     ):
         kw = keywords or ["python", "cli", "developer-tools"]
         self.providers: list[BaseAdProvider] = []
@@ -254,13 +263,13 @@ class AdClient:
     def _save_cache(self, ad: Ad):
         try:
             data = {
-                "ts":       time.time(),
+                "ts": time.time(),
                 "headline": ad.headline,
-                "content":  ad.content,
-                "cta":      ad.cta,
-                "link":     ad.link,
-                "view_url": "",      # 캐시된 광고는 재추적 안 함
-                "source":   ad.source + "_cached",
+                "content": ad.content,
+                "cta": ad.cta,
+                "link": ad.link,
+                "view_url": "",  # 캐시된 광고는 재추적 안 함
+                "source": ad.source + "_cached",
             }
             with open(CACHE_FILE, "w") as f:
                 json.dump(data, f)
@@ -280,6 +289,7 @@ class AdClient:
 
 # ── 편의 함수: 환경변수에서 자동 설정 ────────────────────────────
 
+
 def make_client_from_env(keywords: list[str] = None) -> AdClient:
     """
     환경변수에서 설정을 읽어 AdClient 생성.
@@ -289,8 +299,8 @@ def make_client_from_env(keywords: list[str] = None) -> AdClient:
     ETHICALADS_PUBLISHER   — EthicalAds publisher slug
     """
     return AdClient(
-        self_url      = os.environ.get("NOOP_AD_SERVER_URL"),
-        ethical_token = os.environ.get("ETHICALADS_TOKEN"),
-        ethical_pub   = os.environ.get("ETHICALADS_PUBLISHER"),
-        keywords      = keywords,
+        self_url=os.environ.get("NOOP_AD_SERVER_URL"),
+        ethical_token=os.environ.get("ETHICALADS_TOKEN"),
+        ethical_pub=os.environ.get("ETHICALADS_PUBLISHER"),
+        keywords=keywords,
     )

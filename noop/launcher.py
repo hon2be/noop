@@ -2,23 +2,24 @@
 noop — launcher.py
 메인 진입점. curses wrapper 에서 호출.
 """
+
 import curses
 import os
 import signal
 import pathlib
 
 signal.signal(signal.SIGQUIT, signal.SIG_IGN)
-signal.signal(signal.SIGINT,  signal.SIG_IGN)
+signal.signal(signal.SIGINT, signal.SIG_IGN)
 
-from .intro          import render_intro, render_outro
-from .game_window    import GameWindow
-from .games          import SnakeGame, QuizGame
-from .category_menu  import render_category_menu, render_count_menu
-from .lang_menu      import render_lang_menu
-from .i18n           import load_from_config, t
-from .pack_loader    import load_items
-from .ad_client      import make_client_from_env
-from .ad_renderer    import render_ad
+from .intro import render_intro, render_outro  # noqa: E402
+from .game_window import GameWindow  # noqa: E402
+from .games import SnakeGame, QuizGame  # noqa: E402
+from .category_menu import render_category_menu, render_count_menu  # noqa: E402
+from .lang_menu import render_lang_menu  # noqa: E402
+from .i18n import load_from_config  # noqa: E402
+from .pack_loader import load_items  # noqa: E402
+from .ad_client import make_client_from_env  # noqa: E402
+from .ad_renderer import render_ad  # noqa: E402
 
 PACKS_DIR = str(pathlib.Path(__file__).parent.parent / "packs")
 
@@ -57,6 +58,7 @@ def main(stdscr):
 
         game = QuizGame(items=items[:count])
         from .category_menu import MENU_ITEMS
+
         label_map = {key: label for label, key in MENU_ITEMS}
         game.name = f"퀴즈 · {label_map.get(category, category)}"
 

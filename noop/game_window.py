@@ -2,35 +2,36 @@
 noop — game_window.py
 GameWindow: 게임 루프, 접기/펼치기, 키 라우팅
 """
+
 import curses
 import time
 from .renderer import draw_box, draw_text_center, get_game_size, get_key
-from .i18n     import t
+from .i18n import t
 
-AD_INTERVAL = 10   # 퀴즈 N문제마다 광고 1회
-AD_MIN_TOTAL = 5   # 총 문제 수가 이 값 이상일 때만 중간 광고 표시
+AD_INTERVAL = 10  # 퀴즈 N문제마다 광고 1회
+AD_MIN_TOTAL = 5  # 총 문제 수가 이 값 이상일 때만 중간 광고 표시
 
-KEY_TOGGLE = ord('h')   # h — 접기/펼치기 (hide)
-KEY_QUIT   = ord('q')   # q — 종료
-KEY_LEFT   = curses.KEY_LEFT
-KEY_RIGHT  = curses.KEY_RIGHT
-KEY_ENTER  = ord('\n')
-KEY_SPACE  = ord(' ')
-KEY_TAB    = ord('\t')
+KEY_TOGGLE = ord("h")  # h — 접기/펼치기 (hide)
+KEY_QUIT = ord("q")  # q — 종료
+KEY_LEFT = curses.KEY_LEFT
+KEY_RIGHT = curses.KEY_RIGHT
+KEY_ENTER = ord("\n")
+KEY_SPACE = ord(" ")
+KEY_TAB = ord("\t")
 
 
 class GameWindow:
     def __init__(self, stdscr, game=None, ad_client=None):
-        self.stdscr     = stdscr
-        self.game       = game
-        self.ad_client  = ad_client   # None이면 광고 없음
+        self.stdscr = stdscr
+        self.game = game
+        self.ad_client = ad_client  # None이면 광고 없음
 
-        self.collapsed  = False
-        self.current    = 1
-        self.total      = 10
-        self.game_type  = game.name if game else "준비 중"
+        self.collapsed = False
+        self.current = 1
+        self.total = 10
+        self.game_type = game.name if game else "준비 중"
 
-        self._last_ad_at = 0   # 마지막으로 광고를 표시한 answered 값
+        self._last_ad_at = 0  # 마지막으로 광고를 표시한 answered 값
 
     # ── 메인 루프 ──────────────────────────────────────────────
 
@@ -70,6 +71,7 @@ class GameWindow:
         if not self.ad_client:
             return False
         from .games.quiz import QuizGame
+
         if not isinstance(self.game, QuizGame):
             return False
         answered = self.game.answered
@@ -84,6 +86,7 @@ class GameWindow:
     def _show_ad(self):
         """광고 표시 후 게임 루프 복귀."""
         from .ad_renderer import render_ad
+
         self._last_ad_at = self.game.answered
         # timeout을 풀고 광고 렌더러에 넘김
         self.stdscr.timeout(-1)
@@ -110,7 +113,7 @@ class GameWindow:
             f" ▶  {self.game_type}"
             f"  {self.current}/{self.total}"
             f"  │  " + t("game.hint_expand") + "  " + t("game.hint_quit") + " "
-        ).ljust(cols)[:cols - 1]
+        ).ljust(cols)[: cols - 1]
         try:
             self.stdscr.attron(curses.A_REVERSE)
             self.stdscr.addstr(curses.LINES - 1, 0, bar)
@@ -121,12 +124,13 @@ class GameWindow:
     def _render_expanded(self):
         """풀 게임 창"""
         w, h = get_game_size()
-        ox = (curses.COLS  - w) // 2
+        ox = (curses.COLS - w) // 2
         oy = (curses.LINES - h) // 2
 
         draw_box(self.stdscr, oy, ox, h, w)
 
         from .games.quiz import QuizGame
+
         if isinstance(self.game, QuizGame):
             header = f" {self.game.index + 1}/{self.game.total}  [{self.game_type}] "
         else:
@@ -142,12 +146,15 @@ class GameWindow:
             self.game.render(self.stdscr, content_y, content_x, content_h, content_w)
         else:
             draw_text_center(
-                self.stdscr, content_y + content_h // 2,
-                curses.COLS, t("game.loading"), curses.A_DIM
+                self.stdscr,
+                content_y + content_h // 2,
+                curses.COLS,
+                t("game.loading"),
+                curses.A_DIM,
             )
 
         footer = self._footer_hint()
-        self.stdscr.addstr(oy + h - 2, ox + 2, footer[:w - 4], curses.A_DIM)
+        self.stdscr.addstr(oy + h - 2, ox + 2, footer[: w - 4], curses.A_DIM)
 
     def _footer_hint(self):
         if self.game:

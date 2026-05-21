@@ -5,7 +5,7 @@ noop — games/base.py
 
 
 class BaseGame:
-    name        = "게임"
+    name = "게임"
     footer_hint = "Ctrl+Q 종료"
 
     def handle_key(self, key) -> bool:

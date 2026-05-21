@@ -2,6 +2,7 @@
 noop — games/snake.py
 Snake 게임
 """
+
 import curses
 import random
 import time
@@ -17,7 +18,7 @@ class SnakeGame(BaseGame):
             return "r 재시작"
         return "방향키 이동"
 
-    TICK = 0.12   # 뱀 이동 간격 (초)
+    TICK = 0.12  # 뱀 이동 간격 (초)
 
     def __init__(self):
         self.reset()
@@ -25,17 +26,17 @@ class SnakeGame(BaseGame):
     def reset(self):
         self._w = 0
         self._h = 0
-        self.snake  = []     # [(y, x), ...] head first
-        self.dir    = (0, 1) # (dy, dx) 초기 방향: 오른쪽
-        self.food   = None
-        self.score  = 0
-        self.alive  = True
+        self.snake = []  # [(y, x), ...] head first
+        self.dir = (0, 1)  # (dy, dx) 초기 방향: 오른쪽
+        self.food = None
+        self.score = 0
+        self.alive = True
         self._last_tick = time.time()
         self._initialized = False
 
     def _init_board(self, h, w):
         """첫 렌더 시 보드 크기 확정 후 초기화"""
-        self._h = h - 2   # 테두리 제외
+        self._h = h - 2  # 테두리 제외
         self._w = w - 2
         cy, cx = self._h // 2, self._w // 2
         self.snake = [(cy, cx), (cy, cx - 1), (cy, cx - 2)]
@@ -56,15 +57,15 @@ class SnakeGame(BaseGame):
     def handle_key(self, key) -> bool:
         # 게임 오버 상태에서 r 누르면 재시작
         if not self.alive:
-            if key == ord('r'):
+            if key == ord("r"):
                 self.reset()
             return False
 
         DIR_MAP = {
-            curses.KEY_UP:    (-1,  0),
-            curses.KEY_DOWN:  ( 1,  0),
-            curses.KEY_LEFT:  ( 0, -1),
-            curses.KEY_RIGHT: ( 0,  1),
+            curses.KEY_UP: (-1, 0),
+            curses.KEY_DOWN: (1, 0),
+            curses.KEY_LEFT: (0, -1),
+            curses.KEY_RIGHT: (0, 1),
         }
         if key in DIR_MAP:
             dy, dx = DIR_MAP[key]
@@ -84,8 +85,8 @@ class SnakeGame(BaseGame):
         self._last_tick = now
 
         hy, hx = self.snake[0]
-        dy, dx  = self.dir
-        ny, nx  = hy + dy, hx + dx
+        dy, dx = self.dir
+        ny, nx = hy + dy, hx + dx
 
         # 벽 충돌
         if not (0 <= ny < self._h and 0 <= nx < self._w):
@@ -115,30 +116,30 @@ class SnakeGame(BaseGame):
 
         # 보드 테두리
         for col in range(w):
-            stdscr.addch(y,     x + col, '─')
-            stdscr.addch(y+h-1, x + col, '─')
+            stdscr.addch(y, x + col, "─")
+            stdscr.addch(y + h - 1, x + col, "─")
         for row in range(h):
-            stdscr.addch(y + row, x,     '│')
-            stdscr.addch(y + row, x+w-1, '│')
-        stdscr.addch(y,     x,     '┌')
-        stdscr.addch(y,     x+w-1, '┐')
-        stdscr.addch(y+h-1, x,     '└')
-        stdscr.addch(y+h-1, x+w-1, '┘')
+            stdscr.addch(y + row, x, "│")
+            stdscr.addch(y + row, x + w - 1, "│")
+        stdscr.addch(y, x, "┌")
+        stdscr.addch(y, x + w - 1, "┐")
+        stdscr.addch(y + h - 1, x, "└")
+        stdscr.addch(y + h - 1, x + w - 1, "┘")
 
         # 음식
         if self.food:
             fy, fx = self.food
             try:
-                stdscr.addch(y+1+fy, x+1+fx, '●', curses.A_BOLD)
+                stdscr.addch(y + 1 + fy, x + 1 + fx, "●", curses.A_BOLD)
             except curses.error:
                 pass
 
         # 뱀
         for i, (sy, sx) in enumerate(self.snake):
-            ch   = '█' if i == 0 else '▓'
+            ch = "█" if i == 0 else "▓"
             attr = curses.A_BOLD if i == 0 else 0
             try:
-                stdscr.addch(y+1+sy, x+1+sx, ch, attr)
+                stdscr.addch(y + 1 + sy, x + 1 + sx, ch, attr)
             except curses.error:
                 pass
 
@@ -150,14 +151,16 @@ class SnakeGame(BaseGame):
         if not self.alive:
             msg1 = f" GAME OVER  Score: {self.score} "
             msg2 = " r 재시작  q 종료 "
-            my   = y + h // 2
-            stdscr.addstr(my,     x + (w - len(msg1)) // 2, msg1, curses.A_REVERSE | curses.A_BOLD)
+            my = y + h // 2
+            stdscr.addstr(
+                my, x + (w - len(msg1)) // 2, msg1, curses.A_REVERSE | curses.A_BOLD
+            )
             stdscr.addstr(my + 1, x + (w - len(msg2)) // 2, msg2, curses.A_REVERSE)
 
     def get_stats(self) -> dict:
         return {
             "accuracy": 100,
-            "count":    self.score,
-            "elapsed":  "N/A",
-            "streak":   self.score,
+            "count": self.score,
+            "elapsed": "N/A",
+            "streak": self.score,
         }

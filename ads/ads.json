@@ -78,5 +78,21 @@
       "  │  AI autocomplete ✓  │  ",
       "  '─────────────────────'  "
     ]
+  },
+  {
+    "headline": "Oh, bother. — 기다리는 중이신가요?",
+    "content": "noop이 즐거우셨다면 GitHub 스타 하나 주세요. 꿀처럼 달콤하게 받겠습니다.",
+    "cta": "★ GitHub 스타 주기",
+    "link": "https://github.com/hon2be/noop",
+    "view_url": "",
+    "ascii_art": [
+      "        .~~~~~.          ",
+      "       / o   o \\         ",
+      "      |   (w)   |        ",
+      "      |  '---'  |        ",
+      "       \\ |HUN| /         ",
+      "        \\|NEY|/          ",
+      "       Oh, bother!       "
+    ]
   }
 ]

@@ -7,12 +7,12 @@ noop — i18n.py
   t("quiz.correct")            → "  ✓  정답!  "
   t("count_menu.desc", total=10, count=5)  → "총 10문항 중 5문제를 풉니다"
 """
+
 import json
-import os
 from pathlib import Path
 
 _LANG_DIR = Path(__file__).parent.parent / "lang"
-_CONFIG   = Path.home() / ".config" / "noop" / "config.json"
+_CONFIG = Path.home() / ".config" / "noop" / "config.json"
 
 # 지원 언어 목록: (code, 표시명)
 LANGUAGES = [
@@ -25,10 +25,11 @@ LANGUAGES = [
 ]
 
 _strings: dict = {}
-_lang:    str  = "ko"
+_lang: str = "ko"
 
 
 # ── 공개 API ──────────────────────────────────────────────────────
+
 
 def t(key: str, **kwargs) -> str:
     """키에 해당하는 번역 문자열 반환. 없으면 키 자체 반환."""
@@ -56,12 +57,13 @@ def load_from_config():
     """config 파일에서 언어를 읽어 로드. 없으면 None 반환(첫 실행)."""
     code = _read_config()
     if code is None:
-        return None        # 첫 실행 → 언어 선택 필요
+        return None  # 첫 실행 → 언어 선택 필요
     load_lang(code)
     return code
 
 
 # ── 내부 ─────────────────────────────────────────────────────────
+
 
 def _read_config() -> str | None:
     try:
@@ -94,4 +96,4 @@ _code = _read_config()
 if _code:
     load_lang(_code)
 else:
-    load_lang("ko")   # 언어 선택 전 기본값
+    load_lang("ko")  # 언어 선택 전 기본값
