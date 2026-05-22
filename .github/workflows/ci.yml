@@ -120,8 +120,8 @@ jobs:
               data = json.loads(ads_file.read_text(encoding="utf-8"))
               assert isinstance(data, list), "최상위가 배열이어야 함"
               for i, ad in enumerate(data):
-                  assert "id" in ad,    f"광고[{i}]: 'id' 필드 없음"
-                  assert "title" in ad, f"광고[{i}]: 'title' 필드 없음"
+                  assert "headline" in ad, f"광고[{i}]: 'headline' 필드 없음"
+                  assert "link" in ad,     f"광고[{i}]: 'link' 필드 없음"
               print(f"✅ 광고 {len(data)}개 유효성 검사 통과")
           except Exception as e:
               print(f"❌ {e}")
