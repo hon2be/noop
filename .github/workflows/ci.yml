@@ -84,9 +84,8 @@ jobs:
           for pack_json in packs_dir.rglob("pack.json"):
               try:
                   data = json.loads(pack_json.read_text(encoding="utf-8"))
-                  assert "id" in data,   f"{pack_json}: 'id' 필드 없음"
-                  assert "name" in data, f"{pack_json}: 'name' 필드 없음"
-                  assert "type" in data, f"{pack_json}: 'type' 필드 없음"
+                  assert "id" in data,    f"{pack_json}: 'id' 필드 없음"
+                  assert "title" in data, f"{pack_json}: 'title' 필드 없음"
               except Exception as e:
                   errors.append(str(e))
 
@@ -95,7 +94,7 @@ jobs:
                   data = json.loads(content_json.read_text(encoding="utf-8"))
                   assert isinstance(data, list), f"{content_json}: 최상위가 배열이어야 함"
                   for i, item in enumerate(data):
-                      assert "q" in item, f"{content_json}[{i}]: 'q' 필드 없음"
+                      assert "question" in item, f"{content_json}[{i}]: 'question' 필드 없음"
               except Exception as e:
                   errors.append(str(e))
 
