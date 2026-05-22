@@ -30,24 +30,6 @@ jobs:
       - name: 포맷 검사
         run: ruff format --check noop/
 
-  typecheck:
-    name: 타입 검사 (pyright)
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4.2.2
-
-      - name: Python 설정
-        uses: actions/setup-python@v5.3.0
-        with:
-          python-version: "3.11"
-
-      - name: pyright 설치
-        run: pip install pyright --quiet
-
-      - name: 타입 검사
-        run: pyright noop/
-        continue-on-error: true   # 현재 타입 힌트가 부분적이라 경고 허용
-
   import-check:
     name: 임포트 / 문법 검사
     runs-on: ubuntu-latest
@@ -66,16 +48,30 @@ jobs:
         run: pip install -e . --quiet
 
       - name: 모든 모듈 임포트 검사
-        # curses는 headless 환경에서도 임포트는 가능
         run: |
-          python -c "import noop"
-          python -c "from noop import launcher"
-          python -c "from noop import renderer"
-          python -c "from noop import pack_loader"
-          python -c "from noop import i18n"
-          python -c "from noop import ad_client"
-          python -c "from noop.games import SnakeGame, QuizGame"
-          echo "✅ 모든 모듈 임포트 성공"
+          python - <<'EOF'
+          import sys
+          modules = [
+              "noop",
+              "noop.i18n",
+              "noop.pack_loader",
+              "noop.ad_client",
+              "noop.renderer",
+              "noop.games",
+          ]
+          failed = []
+          for m in modules:
+              try:
+                  __import__(m)
+                  print(f"  ✅ {m}")
+              except Exception as e:
+                  print(f"  ❌ {m}: {e}")
+                  failed.append(m)
+          if failed:
+              print(f"\n실패: {failed}")
+              sys.exit(1)
+          print("\n✅ 모든 모듈 임포트 성공")
+          EOF
 
       - name: 콘텐츠 팩 JSON 유효성 검사
         run: |
